@@ -3275,7 +3275,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3511,7 +3511,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3747,7 +3747,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3978,12 +3978,12 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "chế độ chia",
+          "comment": "Chế độ chia",
           "comment2": ""
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4214,12 +4214,12 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "chế độ hỗn hợp",
+          "comment": "Chế độ hỗn hợp",
           "comment2": ""
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4441,6 +4441,21 @@
         {
           "disabled": false,
           "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Điểm số cao nhất được hiển thị",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -4553,7 +4568,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.5672
+        "zoomFactor": 0.6854
       },
       "objectsGroups": [],
       "variables": [],
@@ -4669,7 +4684,7 @@
           "height": 72,
           "layer": "",
           "locked": false,
-          "name": "Choose2",
+          "name": "B",
           "width": 77,
           "x": 1177,
           "y": 480,
@@ -4684,7 +4699,7 @@
           "height": 72,
           "layer": "",
           "locked": false,
-          "name": "Choose1",
+          "name": "A",
           "width": 77,
           "x": 344,
           "y": 480,
@@ -4699,7 +4714,7 @@
           "height": 72,
           "layer": "",
           "locked": false,
-          "name": "Choose3",
+          "name": "C",
           "width": 77,
           "x": 344,
           "y": 696,
@@ -4714,7 +4729,7 @@
           "height": 72,
           "layer": "",
           "locked": false,
-          "name": "Choose4",
+          "name": "D",
           "width": 77,
           "x": 1177,
           "y": 696,
@@ -4731,7 +4746,7 @@
           "locked": false,
           "name": "X",
           "width": 144,
-          "x": 608,
+          "x": 640,
           "y": 192,
           "zOrder": 17,
           "numberProperties": [],
@@ -4746,7 +4761,7 @@
           "locked": false,
           "name": "Y",
           "width": 144,
-          "x": 832,
+          "x": 864,
           "y": 192,
           "zOrder": 18,
           "numberProperties": [],
@@ -4776,7 +4791,7 @@
           "locked": false,
           "name": "Calculate",
           "width": 0,
-          "x": 768,
+          "x": 800,
           "y": 192,
           "zOrder": 20,
           "numberProperties": [],
@@ -4791,8 +4806,8 @@
           "locked": false,
           "name": "Score",
           "width": 0,
-          "x": 1336,
-          "y": 46,
+          "x": 1304,
+          "y": 18,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -4804,11 +4819,41 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "NewObject",
+          "name": "Scoree",
           "width": 0,
-          "x": 368,
-          "y": 586,
-          "zOrder": 22,
+          "x": 1120,
+          "y": 24,
+          "zOrder": 23,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Best",
+          "width": 0,
+          "x": 1120,
+          "y": 96,
+          "zOrder": 24,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "BestScore",
+          "width": 0,
+          "x": 1294,
+          "y": 89,
+          "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4923,7 +4968,7 @@
             "opacity": 255,
             "fontSize": 60,
             "visible": true,
-            "color": "#000000",
+            "color": "#4a90e2",
             "fontFamily": "",
             "align": "center",
             "wordWrap": true
@@ -5090,7 +5135,7 @@
           ]
         },
         {
-          "name": "Choose1",
+          "name": "A",
           "tags": "",
           "type": "BBText::BBText",
           "variables": [],
@@ -5100,7 +5145,7 @@
             "opacity": 255,
             "fontSize": 60,
             "visible": true,
-            "color": "#000000",
+            "color": "#50e3c2",
             "fontFamily": "",
             "align": "center",
             "wordWrap": true
@@ -5267,7 +5312,7 @@
           ]
         },
         {
-          "name": "Choose2",
+          "name": "B",
           "tags": "",
           "type": "BBText::BBText",
           "variables": [],
@@ -5277,7 +5322,7 @@
             "opacity": 255,
             "fontSize": 60,
             "visible": true,
-            "color": "#000000",
+            "color": "#50e3c2",
             "fontFamily": "",
             "align": "center",
             "wordWrap": true
@@ -5400,7 +5445,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
@@ -5444,7 +5489,7 @@
           ]
         },
         {
-          "name": "Choose3",
+          "name": "C",
           "tags": "",
           "type": "BBText::BBText",
           "variables": [],
@@ -5454,7 +5499,7 @@
             "opacity": 255,
             "fontSize": 60,
             "visible": true,
-            "color": "#000000",
+            "color": "#50e3c2",
             "fontFamily": "",
             "align": "center",
             "wordWrap": true
@@ -5621,7 +5666,7 @@
           ]
         },
         {
-          "name": "Choose4",
+          "name": "D",
           "tags": "",
           "type": "BBText::BBText",
           "variables": [],
@@ -5631,7 +5676,7 @@
             "opacity": 255,
             "fontSize": 60,
             "visible": true,
-            "color": "#000000",
+            "color": "#50e3c2",
             "fontFamily": "",
             "align": "center",
             "wordWrap": true
@@ -5648,7 +5693,7 @@
             "opacity": 255,
             "fontSize": 120,
             "visible": true,
-            "color": "#000000",
+            "color": "#8b572a",
             "fontFamily": "",
             "align": "center",
             "wordWrap": true
@@ -5661,11 +5706,11 @@
           "variables": [],
           "behaviors": [],
           "content": {
-            "text": "*",
+            "text": "/",
             "opacity": 255,
             "fontSize": 120,
             "visible": true,
-            "color": "#000000",
+            "color": "#8b572a",
             "fontFamily": "",
             "align": "center",
             "wordWrap": true
@@ -5682,7 +5727,7 @@
             "opacity": 255,
             "fontSize": 120,
             "visible": true,
-            "color": "#000000",
+            "color": "#8b572a",
             "fontFamily": "",
             "align": "center",
             "wordWrap": true
@@ -5690,7 +5735,7 @@
         },
         {
           "bold": false,
-          "italic": false,
+          "italic": true,
           "name": "Score",
           "smoothed": true,
           "tags": "",
@@ -5700,17 +5745,55 @@
           "behaviors": [],
           "string": "0",
           "font": "",
-          "characterSize": 30,
+          "characterSize": 70,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 134,
+            "g": 233,
+            "r": 184
           }
         },
         {
           "bold": false,
-          "italic": false,
-          "name": "NewObject",
+          "italic": true,
+          "name": "Scoree",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Score:",
+          "font": "",
+          "characterSize": 60,
+          "color": {
+            "b": 0,
+            "g": 255,
+            "r": 133
+          }
+        },
+        {
+          "bold": false,
+          "italic": true,
+          "name": "Best",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Best:",
+          "font": "",
+          "characterSize": 70,
+          "color": {
+            "b": 27,
+            "g": 2,
+            "r": 208
+          }
+        },
+        {
+          "bold": false,
+          "italic": true,
+          "name": "BestScore",
           "smoothed": true,
           "tags": "",
           "type": "TextObject::Text",
@@ -5719,11 +5802,11 @@
           "behaviors": [],
           "string": "0",
           "font": "",
-          "characterSize": 60,
+          "characterSize": 80,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 27,
+            "g": 2,
+            "r": 208
           }
         }
       ],
@@ -6105,7 +6188,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -6146,9 +6229,9 @@
                     "value": "VarGlobal"
                   },
                   "parameters": [
-                    "Score0",
-                    "<=",
-                    "GlobalVariable(Score)"
+                    "mixedMode",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -6157,17 +6240,52 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarGlobal"
+                    "value": "TextObject::String"
                   },
                   "parameters": [
-                    "Score0",
+                    "BestScore",
                     "=",
-                    "GlobalVariable(Score)"
+                    "ToString(GlobalVariable(Score0))"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "Score0",
+                        "<=",
+                        "GlobalVariable(Score)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Score0",
+                        "=",
+                        "GlobalVariable(Score)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             },
             {
               "disabled": false,
@@ -6192,9 +6310,9 @@
                     "value": "VarGlobal"
                   },
                   "parameters": [
-                    "Score1",
-                    "<=",
-                    "GlobalVariable(Score)"
+                    "mixedMode",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -6203,17 +6321,52 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarGlobal"
+                    "value": "TextObject::String"
                   },
                   "parameters": [
-                    "Score1",
+                    "BestScore",
                     "=",
-                    "GlobalVariable(Score)"
+                    "ToString(GlobalVariable(Score1))"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "Score1",
+                        "<=",
+                        "GlobalVariable(Score)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Score1",
+                        "=",
+                        "GlobalVariable(Score)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             },
             {
               "disabled": false,
@@ -6238,9 +6391,9 @@
                     "value": "VarGlobal"
                   },
                   "parameters": [
-                    "Score2",
-                    "<=",
-                    "GlobalVariable(Score)"
+                    "mixedMode",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -6249,17 +6402,52 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarGlobal"
+                    "value": "TextObject::String"
                   },
                   "parameters": [
-                    "Score2",
+                    "BestScore",
                     "=",
-                    "GlobalVariable(Score)"
+                    "ToString(GlobalVariable(Score2))"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "Score2",
+                        "<=",
+                        "GlobalVariable(Score)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Score2",
+                        "=",
+                        "GlobalVariable(Score)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             },
             {
               "disabled": false,
@@ -6284,9 +6472,9 @@
                     "value": "VarGlobal"
                   },
                   "parameters": [
-                    "Score3",
-                    "<=",
-                    "GlobalVariable(Score)"
+                    "mixedMode",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -6295,17 +6483,52 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarGlobal"
+                    "value": "TextObject::String"
                   },
                   "parameters": [
-                    "Score3",
+                    "BestScore",
                     "=",
-                    "GlobalVariable(Score)"
+                    "ToString(GlobalVariable(Score3))"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "Score3",
+                        "<=",
+                        "GlobalVariable(Score)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Score3",
+                        "=",
+                        "GlobalVariable(Score)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             },
             {
               "disabled": false,
@@ -6323,35 +6546,58 @@
                     "1"
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarGlobal"
-                  },
-                  "parameters": [
-                    "Score4",
-                    "<=",
-                    "GlobalVariable(Score)"
-                  ],
-                  "subInstructions": []
                 }
               ],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarGlobal"
+                    "value": "TextObject::String"
                   },
                   "parameters": [
-                    "Score4",
+                    "BestScore",
                     "=",
-                    "GlobalVariable(Score)"
+                    "ToString(GlobalVariable(Score4))"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "Score4",
+                        "<=",
+                        "GlobalVariable(Score)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Score4",
+                        "=",
+                        "GlobalVariable(Score)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ]
         },
@@ -6450,6 +6696,348 @@
             }
           ],
           "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Chế độ hỗn hợp",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "mixedMode",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Next",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Ran",
+                    "=",
+                    "RandomInRange(1,4)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "Ran",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "addMode",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "subtractMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "multiplyMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "devideMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "Ran",
+                        "=",
+                        "2"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "addMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "devideMode",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "multiplyMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "subtractMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "Ran",
+                        "=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "addMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "devideMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "multiplyMode",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "subtractMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "Ran",
+                        "=",
+                        "4"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "addMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "devideMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "multiplyMode",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "subtractMode",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
             {
               "disabled": false,
               "folded": false,
@@ -6823,6 +7411,40 @@
                   "parameters": [
                     "C",
                     "=",
+                    "Variable(A)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "C",
+                    "+",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "C",
+                    "=",
                     "Variable(B)"
                   ],
                   "subInstructions": []
@@ -6855,40 +7477,6 @@
                     "value": "VarScene"
                   },
                   "parameters": [
-                    "C",
-                    "=",
-                    "Variable(A)"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "C",
-                    "+",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
                     "D",
                     "=",
                     "Variable(A)"
@@ -6905,7 +7493,7 @@
                   "parameters": [
                     "D",
                     "+",
-                    "1"
+                    "3"
                   ],
                   "subInstructions": []
                 }
@@ -6939,7 +7527,7 @@
                   "parameters": [
                     "D",
                     "+",
-                    "1"
+                    "2"
                   ],
                   "subInstructions": []
                 }
@@ -6978,42 +7566,6 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Tổng hợp (mixed)",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarGlobal"
-                  },
-                  "parameters": [
-                    "mixedMode",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
               "events": []
             },
             {
@@ -7082,7 +7634,7 @@
                   "parameters": [
                     "Calculate",
                     "=",
-                    "752"
+                    "784"
                   ],
                   "subInstructions": []
                 }
@@ -7490,102 +8042,6 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hiển thị các số random",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BBText::SetBBText"
-                  },
-                  "parameters": [
-                    "Choose1",
-                    "=",
-                    "ToString(Variable(A))"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BBText::SetBBText"
-                  },
-                  "parameters": [
-                    "Choose2",
-                    "=",
-                    "ToString(Variable(B))"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BBText::SetBBText"
-                  },
-                  "parameters": [
-                    "Choose3",
-                    "=",
-                    "ToString(Variable(C))"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BBText::SetBBText"
-                  },
-                  "parameters": [
-                    "Choose4",
-                    "=",
-                    "ToString(Variable(D))"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BBText::SetBBText"
-                  },
-                  "parameters": [
-                    "X",
-                    "=",
-                    "ToString(Variable(X))"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BBText::SetBBText"
-                  },
-                  "parameters": [
-                    "Y",
-                    "=",
-                    "ToString(Variable(Y))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
               "comment": "Trường hợp kết quả bằng 1 trong 4 đáp án",
               "comment2": ""
             },
@@ -7833,7 +8289,7 @@
                         "value": "BBText::SetBBText"
                       },
                       "parameters": [
-                        "Choose1",
+                        "A",
                         "=",
                         "ToString(Variable(A))"
                       ],
@@ -7879,7 +8335,7 @@
                         "value": "BBText::SetBBText"
                       },
                       "parameters": [
-                        "Choose2",
+                        "B",
                         "=",
                         "ToString(Variable(B))"
                       ],
@@ -7925,7 +8381,7 @@
                         "value": "BBText::SetBBText"
                       },
                       "parameters": [
-                        "Choose3",
+                        "C",
                         "=",
                         "ToString(Variable(C))"
                       ],
@@ -7971,7 +8427,7 @@
                         "value": "BBText::SetBBText"
                       },
                       "parameters": [
-                        "Choose4",
+                        "D",
                         "=",
                         "ToString(Variable(D))"
                       ],
@@ -7981,6 +8437,525 @@
                   "events": []
                 }
               ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Chỉnh toạ độ",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "X",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "X",
+                    "=",
+                    "672"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "X",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "X",
+                    "=",
+                    "640"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Y",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Y",
+                    "=",
+                    "896"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Y",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Y",
+                    "=",
+                    "864"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "A",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "A",
+                    "=",
+                    "362"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "A",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "A",
+                    "=",
+                    "344"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "B",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "B",
+                    "=",
+                    "1195"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "B",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "B",
+                    "=",
+                    "1177"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "C",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "C",
+                    "=",
+                    "362"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "C",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "C",
+                    "=",
+                    "344"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "D",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "D",
+                    "=",
+                    "1195"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "D",
+                    "<",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "D",
+                    "=",
+                    "1177"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Hiển thị các số random",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "X",
+                    "=",
+                    "ToString(Variable(X))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "Y",
+                    "=",
+                    "ToString(Variable(Y))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "A",
+                    "=",
+                    "ToString(Variable(A))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "B",
+                    "=",
+                    "ToString(Variable(B))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "C",
+                    "=",
+                    "ToString(Variable(C))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "D",
+                    "=",
+                    "ToString(Variable(D))"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ]
         },
@@ -8001,7 +8976,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
