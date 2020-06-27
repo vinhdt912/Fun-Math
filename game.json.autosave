@@ -409,6 +409,64 @@
         "name": "Images\\While-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "star.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "star.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Sounds/choose.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sounds\\choose.ogg",
+        "userAdded": false
+      },
+      {
+        "file": "Sounds/sound_game.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sounds\\sound_game.mp3",
+        "userAdded": false
+      },
+      {
+        "file": "Sounds/sound_track.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sounds\\sound_track.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Sounds/sound_mode.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sounds\\sound_mode.mp3",
+        "userAdded": false
+      },
+      {
+        "file": "Sounds/click.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sounds\\click.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "Sounds/ting.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sounds\\ting.mp3",
+        "userAdded": false
+      },
+      {
+        "file": "Sounds/thua.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sounds\\thua.mp3",
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -525,8 +583,8 @@
           "locked": false,
           "name": "startButton",
           "width": 0,
-          "x": 690,
-          "y": 380,
+          "x": 800,
+          "y": 490,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -540,8 +598,8 @@
           "locked": false,
           "name": "modeButton",
           "width": 0,
-          "x": 640,
-          "y": 670,
+          "x": 800,
+          "y": 730,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -584,7 +642,12 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "0",
@@ -600,8 +663,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 110,
+                        "y": 110
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -629,8 +692,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 110,
+                        "y": 110
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -652,7 +715,12 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "0",
@@ -668,8 +736,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 60
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -697,8 +765,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 60
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -756,6 +824,32 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "click",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Sounds\\sound_game.mp3",
+                "yes",
+                "30",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -806,6 +900,23 @@
                 "1"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "startButton",
+                "Tween",
+                "\"scale\"",
+                "1.1",
+                "1.1",
+                "\"easeInQuad\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": [
@@ -824,17 +935,29 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
                     "startButton",
-                    "\"start\""
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -847,6 +970,32 @@
                     "Starter",
                     "=",
                     "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -875,12 +1024,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
                 "startButton",
-                "\"start\"",
-                "0.5"
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             }
@@ -894,7 +1043,7 @@
               "parameters": [
                 "",
                 "\"Mode\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -932,13 +1081,30 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "startButton",
+                "Tween",
+                "\"scale\"",
+                "1",
+                "1",
+                "\"easeInQuad\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -967,6 +1133,23 @@
                 "1\n"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "modeButton",
+                "Tween",
+                "\"scale\"",
+                "1.1",
+                "1.1",
+                "\"easeInQuad\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": [
@@ -985,17 +1168,29 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "modeButton",
-                    "\"mode\""
+                    "startButton",
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -1007,6 +1202,32 @@
                   "parameters": [
                     "Moder",
                     "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "100",
                     "1"
                   ],
                   "subInstructions": []
@@ -1036,12 +1257,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
-                "modeButton",
-                "\"mode\"",
-                "0.5"
+                "startButton",
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             }
@@ -1055,7 +1276,7 @@
               "parameters": [
                 "",
                 "\"Difficult\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -1091,6 +1312,23 @@
                 "modeButton",
                 "=",
                 "0\n\n"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "modeButton",
+                "Tween",
+                "\"scale\"",
+                "1",
+                "1",
+                "\"easeInQuad\"",
+                "50",
+                ""
               ],
               "subInstructions": []
             }
@@ -1319,8 +1557,8 @@
           "locked": false,
           "name": "Normal",
           "width": 0,
-          "x": 640,
-          "y": 300,
+          "x": 800,
+          "y": 360,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -1334,8 +1572,8 @@
           "locked": false,
           "name": "Hard",
           "width": 0,
-          "x": 640,
-          "y": 480,
+          "x": 800,
+          "y": 520,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -1446,7 +1684,12 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "0",
@@ -1462,8 +1705,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 60
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -1491,8 +1734,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 60
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -1514,7 +1757,12 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "0",
@@ -1530,8 +1778,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 60
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -1559,8 +1807,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 60
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -1688,6 +1936,18 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "click",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -1734,6 +1994,40 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "Normal",
+                "Tween",
+                "\"scale\"",
+                "1.1",
+                "1.1",
+                "\"linear\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "Hard",
+                "Tween",
+                "\"scale\"",
+                "1",
+                "1",
+                "\"linear\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -1778,6 +2072,40 @@
                 "Hard",
                 "=",
                 "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "Hard",
+                "Tween",
+                "\"scale\"",
+                "1.1",
+                "1.1",
+                "\"linear\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "Normal",
+                "Tween",
+                "\"scale\"",
+                "1",
+                "1",
+                "\"linear\"",
+                "50",
+                ""
               ],
               "subInstructions": []
             }
@@ -1801,7 +2129,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -1842,6 +2170,40 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "Normal",
+                "Tween",
+                "\"scale\"",
+                "1.1",
+                "1.1",
+                "\"linear\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "Hard",
+                "Tween",
+                "\"scale\"",
+                "1",
+                "1",
+                "\"linear\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": [
@@ -1858,6 +2220,18 @@
                   "parameters": [
                     "",
                     "Left"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -1890,11 +2264,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "Normal",
-                    "\"normal\""
+                    "startButton",
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -1906,6 +2280,32 @@
                   "parameters": [
                     "Normaler",
                     "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "100",
                     "1"
                   ],
                   "subInstructions": []
@@ -1923,12 +2323,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
-                "Normal",
-                "\"normal\"",
-                "0.2"
+                "startButton",
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             },
@@ -1954,7 +2354,7 @@
               "parameters": [
                 "",
                 "\"Menu\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -1963,7 +2363,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2004,6 +2404,40 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "Normal",
+                "Tween",
+                "\"scale\"",
+                "1",
+                "1",
+                "\"linear\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectScaleTween"
+              },
+              "parameters": [
+                "Hard",
+                "Tween",
+                "\"scale\"",
+                "1.1",
+                "1.1",
+                "\"linear\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": [
@@ -2020,6 +2454,18 @@
                   "parameters": [
                     "",
                     "Left"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -2052,11 +2498,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "Hard",
-                    "\"hard\""
+                    "startButton",
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -2069,6 +2515,32 @@
                     "Harder",
                     "=",
                     "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -2085,12 +2557,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
-                "Hard",
-                "\"hard\"",
-                "0.2"
+                "startButton",
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             },
@@ -2116,7 +2588,7 @@
               "parameters": [
                 "",
                 "\"Menu\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -2140,7 +2612,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2186,17 +2658,29 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "Back",
-                    "\"back\""
+                    "startButton",
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -2208,6 +2692,32 @@
                   "parameters": [
                     "Backer",
                     "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "100",
                     "1"
                   ],
                   "subInstructions": []
@@ -2225,12 +2735,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
-                "Back",
-                "\"back\"",
-                "0.2"
+                "startButton",
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             },
@@ -2256,7 +2766,7 @@
               "parameters": [
                 "",
                 "\"Menu\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -2317,7 +2827,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -2343,7 +2858,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.46
+        "zoomFactor": 0.49
       },
       "objectsGroups": [],
       "variables": [],
@@ -3065,6 +3580,32 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Sounds\\sound_mode.mp3",
+                "yes",
+                "30",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "click",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -3132,17 +3673,55 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "PlayMusic"
                   },
                   "parameters": [
-                    "Back",
-                    "\"back\""
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "startButton",
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -3171,12 +3750,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
-                "Back",
-                "\"back\"",
-                "0.2"
+                "startButton",
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             },
@@ -3202,7 +3781,7 @@
               "parameters": [
                 "",
                 "\"Menu\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -3322,9 +3901,47 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "no",
+                    "100",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
                 {
                   "type": {
                     "inverted": false,
@@ -3388,11 +4005,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "addMode",
-                    "\"add\""
+                    "startButton",
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -3421,12 +4038,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
-                "addMode",
-                "\"add\"",
-                "0.2"
+                "startButton",
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             },
@@ -3452,7 +4069,7 @@
               "parameters": [
                 "",
                 "\"PlayScreen\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -3558,9 +4175,47 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
                 {
                   "type": {
                     "inverted": false,
@@ -3624,11 +4279,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "subtractMode",
-                    "\"sub\""
+                    "startButton",
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -3657,12 +4312,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
-                "subtractMode",
-                "\"sub\"",
-                "0.2"
+                "startButton",
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             },
@@ -3688,7 +4343,7 @@
               "parameters": [
                 "",
                 "\"PlayScreen\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -3794,9 +4449,47 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
                 {
                   "type": {
                     "inverted": false,
@@ -3860,11 +4553,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "multiplyMode",
-                    "\"multi\""
+                    "startButton",
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -3893,12 +4586,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
-                "multiplyMode",
-                "\"multi\"",
-                "0.2"
+                "startButton",
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             },
@@ -3924,7 +4617,7 @@
               "parameters": [
                 "",
                 "\"PlayScreen\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -4030,9 +4723,47 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
                 {
                   "type": {
                     "inverted": false,
@@ -4096,11 +4827,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "divideMode",
-                    "\"dev\""
+                    "startButton",
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -4129,12 +4860,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
-                "multiplyMode",
-                "\"dev\"",
-                "0.2"
+                "startButton",
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             },
@@ -4160,7 +4891,7 @@
               "parameters": [
                 "",
                 "\"PlayScreen\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -4266,9 +4997,47 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
                 {
                   "type": {
                     "inverted": false,
@@ -4332,11 +5101,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetObjectTimer"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "mixedMode",
-                    "\"mix\""
+                    "startButton",
+                    "\"delay\""
                   ],
                   "subInstructions": []
                 },
@@ -4365,12 +5134,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Timer"
               },
               "parameters": [
-                "mixedMode",
-                "\"mix\"",
-                "0.2"
+                "startButton",
+                "0.3",
+                "\"delay\""
               ],
               "subInstructions": []
             },
@@ -4396,7 +5165,7 @@
               "parameters": [
                 "",
                 "\"PlayScreen\"",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -4558,7 +5327,7 @@
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridB": 255,
         "gridG": 180,
         "gridHeight": 12,
@@ -4566,9 +5335,9 @@
         "gridOffsetY": 0,
         "gridR": 158,
         "gridWidth": 32,
-        "snap": true,
+        "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.6854
+        "zoomFactor": 0.5354
       },
       "objectsGroups": [],
       "variables": [],
@@ -4857,6 +5626,21 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Ready",
+          "width": 0,
+          "x": 770,
+          "y": 346,
+          "zOrder": 26,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -5141,7 +5925,7 @@
           "variables": [],
           "behaviors": [],
           "content": {
-            "text": "00",
+            "text": "",
             "opacity": 255,
             "fontSize": 60,
             "visible": true,
@@ -5318,7 +6102,7 @@
           "variables": [],
           "behaviors": [],
           "content": {
-            "text": "00",
+            "text": "",
             "opacity": 255,
             "fontSize": 60,
             "visible": true,
@@ -5495,7 +6279,7 @@
           "variables": [],
           "behaviors": [],
           "content": {
-            "text": "00",
+            "text": "",
             "opacity": 255,
             "fontSize": 60,
             "visible": true,
@@ -5672,7 +6456,7 @@
           "variables": [],
           "behaviors": [],
           "content": {
-            "text": "00",
+            "text": "",
             "opacity": 255,
             "fontSize": 60,
             "visible": true,
@@ -5689,7 +6473,7 @@
           "variables": [],
           "behaviors": [],
           "content": {
-            "text": "00",
+            "text": "",
             "opacity": 255,
             "fontSize": 120,
             "visible": true,
@@ -5706,7 +6490,7 @@
           "variables": [],
           "behaviors": [],
           "content": {
-            "text": "/",
+            "text": "",
             "opacity": 255,
             "fontSize": 120,
             "visible": true,
@@ -5723,7 +6507,7 @@
           "variables": [],
           "behaviors": [],
           "content": {
-            "text": "00",
+            "text": "",
             "opacity": 255,
             "fontSize": 120,
             "visible": true,
@@ -5780,7 +6564,12 @@
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "string": "Best:",
           "font": "",
           "characterSize": 70,
@@ -5807,6 +6596,87 @@
             "b": 27,
             "g": 2,
             "r": 208
+          }
+        },
+        {
+          "additive": false,
+          "alphaParam": "Mutable",
+          "angleParam": "Mutable",
+          "blueParam": "Random",
+          "destroyWhenNoParticles": true,
+          "emissionEditionSimpleMode": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 360,
+          "emitterForceMax": 85,
+          "emitterForceMin": 45,
+          "emitterXDirection": 0,
+          "emitterYDirection": 1,
+          "emitterZDirection": 0,
+          "flow": 45,
+          "friction": 2,
+          "gravityEditionSimpleMode": true,
+          "greenParam": "Random",
+          "maxParticleNb": 25,
+          "name": "Hightest",
+          "particleAlpha1": 255,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 15,
+          "particleAngle2": 30,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 255,
+          "particleBlue2": 255,
+          "particleEditionSimpleMode": true,
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGravityZ": 0,
+          "particleGreen1": 255,
+          "particleGreen2": 255,
+          "particleLifeTimeMax": 1.5,
+          "particleLifeTimeMin": 0.5,
+          "particleRed1": 255,
+          "particleRed2": 255,
+          "particleSize1": 1,
+          "particleSize2": 100,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "redParam": "Enabled",
+          "rendererParam1": 3,
+          "rendererParam2": 1,
+          "rendererType": "Quad",
+          "sizeParam": "Mutable",
+          "tags": "",
+          "tank": 25,
+          "textureParticleName": "star.png",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 3,
+          "variables": [],
+          "behaviors": []
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Ready",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "string": "3",
+          "font": "",
+          "characterSize": 80,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
           }
         }
       ],
@@ -5887,6 +6757,20 @@
                 "5"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Sounds\\sound_track.mp3",
+                "yes",
+                "30",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -5923,6 +6807,18 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "click",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -5957,6 +6853,32 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "click",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "60",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
                 {
                   "type": {
                     "inverted": false,
@@ -5998,7 +6920,7 @@
               "parameters": [
                 "Back",
                 "\"back\"",
-                "0.1"
+                "0.3"
               ],
               "subInstructions": []
             },
@@ -6108,6 +7030,18 @@
                 "\"0\""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "",
+                "1.1",
+                "\"Ready\""
+              ],
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -6131,6 +7065,185 @@
                 "Time",
                 "-",
                 "\"1\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "",
+                "1",
+                "\"Ready\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Ready",
+                ">=",
+                "\"1\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Ready",
+                "!=",
+                "\"Go\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"Ready\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddTextObjectCharacterSizeTween"
+              },
+              "parameters": [
+                "Ready",
+                "",
+                "\"scale\"",
+                "10",
+                "\"easeInQuad\"",
+                "0.1",
+                "yes"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "Ready",
+                    "-",
+                    "\"1\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Ready",
+                "=",
+                "\"0\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Ready",
+                "=",
+                "\"Go\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "",
+                "0.8",
+                "\"Ready\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Ready",
+                "=",
+                "\"Go\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectOpacityTween"
+              },
+              "parameters": [
+                "Ready",
+                "Tween",
+                "\"opacity\"",
+                "0",
+                "\"linear\"",
+                "200",
+                ""
               ],
               "subInstructions": []
             }
@@ -6188,7 +7301,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -6618,7 +7731,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6640,8 +7753,20 @@
               },
               "parameters": [
                 "",
-                "1",
+                "1.5",
                 "\"Delay\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "",
+                "1.1",
+                "\"Ready\""
               ],
               "subInstructions": []
             }
@@ -8976,7 +10101,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9047,6 +10172,20 @@
                     "click",
                     "=",
                     "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "20",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -9126,6 +10265,20 @@
                       "parameters": [
                         "",
                         "\"Time\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlayMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "Sounds\\ting.mp3",
+                        "",
+                        "30",
+                        "0.8"
                       ],
                       "subInstructions": []
                     }
@@ -9269,7 +10422,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9340,6 +10493,20 @@
                     "click",
                     "=",
                     "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "20",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -9419,6 +10586,20 @@
                       "parameters": [
                         "",
                         "\"Time\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlayMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "Sounds\\ting.mp3",
+                        "",
+                        "30",
+                        "0.8"
                       ],
                       "subInstructions": []
                     }
@@ -9562,7 +10743,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9633,6 +10814,20 @@
                     "click",
                     "=",
                     "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "20",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -9712,6 +10907,20 @@
                       "parameters": [
                         "",
                         "\"Time\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlayMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "Sounds\\ting.mp3",
+                        "",
+                        "30",
+                        "0.8"
                       ],
                       "subInstructions": []
                     }
@@ -9855,7 +11064,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9926,6 +11135,20 @@
                     "click",
                     "=",
                     "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Sounds\\click.mp3",
+                    "",
+                    "20",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -10007,6 +11230,20 @@
                         "\"Delay\""
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlayMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "Sounds\\ting.mp3",
+                        "",
+                        "30",
+                        "0.8"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -10074,6 +11311,20 @@
                       "parameters": [
                         "",
                         "\"Lost\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlayMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "Sounds\\thua.mp3",
+                        "",
+                        "30",
+                        "0.8"
                       ],
                       "subInstructions": []
                     }
@@ -10264,7 +11515,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -10339,9 +11590,67 @@
                 "\"Game Over\""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "oneTime",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "0.1",
+                    "\"Lost\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "oneTime",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "oneTime",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
             {
               "disabled": false,
               "folded": false,
@@ -10513,6 +11822,14 @@
               "events": []
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         }
       ],
       "layers": [
@@ -10534,7 +11851,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     }
   ],
   "externalEvents": [],
