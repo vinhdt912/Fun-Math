@@ -503,6 +503,13 @@
         "name": "Images\\mute-1-0.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "Sounds/votay.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Sounds\\votay.mp3",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -11794,7 +11801,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Chọn đáp án đúng",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -13052,7 +13059,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -13356,20 +13363,6 @@
                           "parameters": [
                             "",
                             "\"Lost\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "PlayMusic"
-                          },
-                          "parameters": [
-                            "",
-                            "Sounds\\thua.mp3",
-                            "",
-                            "30",
-                            "0.8"
                           ],
                           "subInstructions": []
                         }
@@ -13684,7 +13677,7 @@
               "events": [
                 {
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -14070,9 +14063,80 @@
                             ""
                           ],
                           "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PauseMusicCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "1"
+                          ],
+                          "subInstructions": []
                         }
                       ],
                       "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "clap",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarGlobal"
+                              },
+                              "parameters": [
+                                "mute",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "PlayMusic"
+                              },
+                              "parameters": [
+                                "",
+                                "Sounds\\votay.mp3",
+                                "",
+                                "50",
+                                "1.8"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "clap",
+                                "=",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
                         {
                           "disabled": false,
                           "folded": false,
@@ -14626,42 +14690,98 @@
                           "events": []
                         }
                       ]
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Timer"
+                          },
+                          "parameters": [
+                            "",
+                            "4",
+                            "\"Lost\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Mode\"",
+                            "no"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     }
                   ]
                 },
                 {
                   "disabled": false,
-                  "folded": false,
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
-                        "value": "Timer"
+                        "inverted": true,
+                        "value": "VarGlobal"
                       },
                       "parameters": [
-                        "",
-                        "5",
-                        "\"Lost\""
+                        "Score",
+                        ">",
+                        "Variable(BestScore)"
                       ],
                       "subInstructions": []
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "Scene"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Mode\"",
-                        "no"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Timer"
+                          },
+                          "parameters": [
+                            "",
+                            "1.5",
+                            "\"Lost\""
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Mode\"",
+                            "no"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "colorB": 228,
