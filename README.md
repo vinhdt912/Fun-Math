@@ -25,10 +25,12 @@ I. Tổng quát về game
     Với mỗi chế độ chơi khác nhau game sẽ random ra một phép tính bất kì tương ứng với chế độ chơi mà người chơi đã chọn từ trước. Khi qua 1 câu sẽ tính tăng lên một điểm. Game không giới hạn số điểm chơi. Với mỗi một phép tính người chơi sẽ có 5s để trả lời câu hỏi. Khi số điểm của người chơi vượt qua 20 thời gian của mỗi màn sẽ còn là 3s. Mỗi khi đạt được điểm cao mới game sẽ hiện ra một màn hình thông báo.
     
 II. Dữ liệu trong game
+
   Với độ khó Normal, người chơi sẽ làm các phép tính từ 1-10. 
   Với độ khó Hard, người chơi sẽ làm các phép tính từ 10-100.
   Tuy nhiên dữ liệu này có thể dễ dàng thay đổi trong mã nguồn.
   ![alt text](https://github.com/vinhdt912/Fun-Math/blob/master/Images/Data.png)
 
 III. Công nghệ sử dụng
+
   Tựa game dựa trên nền tảng của một platform GDevelope5 để tạo game, Figma để design.
