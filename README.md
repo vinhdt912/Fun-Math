@@ -30,6 +30,10 @@ II. Dữ liệu trong game
   Với độ khó Hard, người chơi sẽ làm các phép tính từ 10-100.
   Tuy nhiên dữ liệu này có thể dễ dàng thay đổi trong mã nguồn.
   ![alt text](https://github.com/vinhdt912/Fun-Math/blob/master/Images/Data.png)
+  Với X và Y là 2 số cần thực hiện phép tính. A, B, C, D là các đáp án của phép tính. Chỉ cần thay đổi khoảng random của các số đó là sẽ thay đổi dữ liệu của toàn bộ các số.
+  Đối với phép chia và phép nhân có một phần đặc biệt hơn nên sẽ phải thay đổi thêm một chút nữa.
+  ![alt text](https://github.com/vinhdt912/Fun-Math/blob/master/Images/Data_2.png)
+  Với phép nhân thì khoảng đáp của nó sẽ lớn lên. Còn đối với phép chia thì X phải chia hết cho Y nên sẽ random đáp án ở khoảng nhỏ phù hợp hơn.
 
 III. Công nghệ sử dụng
 
