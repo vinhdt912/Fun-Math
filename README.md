@@ -1,11 +1,5 @@
 # Fun-Math
-Dự án được hoàn thành dựa trên platform GDevelope 5. Hình ảnh tự design trên figma - có ý tưởng hình ảnh dựa trên game FunMath. Phần âm thanh có thể tìm thấy trên web.
-
-Link sản phẩm: https://games.gdevelop-app.com/game-6b2ca67c-849f-4a16-af5b-1437501bcfa5/index.html
-
-Nên chơi lại 2 - 3 lần để Game load hết tài nguyên sẽ không bị giật lag.
-
-FunMath là một game toán vui nhộn - giúp cho việc tính toán của bạn trở nên nhanh nhẹn hơn.
+FunMath là một game giúp rèn luyện trình độ tính toán của bạn. Tựa game rất phù hợp với học sinh tiểu học, giúp các bạn luyện tập hiệu quả những kiến thức trên trường học.
 
 I. Tổng quát về game
   1. Menu
