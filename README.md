@@ -1,7 +1,7 @@
 # Fun-Math
 FunMath là một game giúp rèn luyện trình độ tính toán của bạn. Tựa game rất phù hợp với học sinh tiểu học, giúp các bạn luyện tập hiệu quả những kiến thức trên trường học.
 
-I. Tổng quát về game
+# I. Tổng quát về game
   1. Menu
     ![alt text](https://github.com/vinhdt912/Fun-Math/blob/master/Images/Menu.png)
     Menu sẽ có 3 chức năng: 
@@ -18,7 +18,7 @@ I. Tổng quát về game
     ![alt text](https://github.com/vinhdt912/Fun-Math/blob/master/Images/Play.png)
     Với mỗi chế độ chơi khác nhau game sẽ random ra một phép tính bất kì tương ứng với chế độ chơi mà người chơi đã chọn từ trước. Khi qua 1 câu sẽ tính tăng lên một điểm. Game không giới hạn số điểm chơi. Với mỗi một phép tính người chơi sẽ có 5s để trả lời câu hỏi. Khi số điểm của người chơi vượt qua 20 thời gian của mỗi màn sẽ còn là 3s. Mỗi khi đạt được điểm cao mới game sẽ hiện ra một màn hình thông báo.
     
-II. Dữ liệu trong game
+# II. Dữ liệu trong game
 
   Với độ khó Normal, người chơi sẽ làm các phép tính từ 1-10. 
   Với độ khó Hard, người chơi sẽ làm các phép tính từ 10-100.
@@ -29,6 +29,6 @@ II. Dữ liệu trong game
   ![alt text](https://github.com/vinhdt912/Fun-Math/blob/master/Images/Data_2.png)
   Với phép nhân thì khoảng đáp của nó sẽ lớn lên. Còn đối với phép chia thì X phải chia hết cho Y nên sẽ random đáp án ở khoảng nhỏ phù hợp hơn.
 
-III. Công nghệ sử dụng
+# III. Công nghệ sử dụng
 
-  Tựa game dựa trên nền tảng của một platform GDevelope5 để tạo game, Figma để design.
+  Tựa game được tạo thành dựa trên nền tảng GDevelope5, Figma để tạo hình ảnh.
